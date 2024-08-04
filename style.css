@@ -1,3 +1,7 @@
+body {
+    background-color: #f9f5d7;
+    padding: 50px;
+}
 #container {
     font-family: monospace;
     max-width: fit-content;
@@ -7,7 +11,7 @@
 }
 #calculator {
     display: grid;
-    gap: 20px;
+    gap: 10px;
     grid-template: 
             'header header header header'
             'clear backspace blank div'
@@ -15,35 +19,63 @@
             'b4 b5 b6 sub'
             'b1 b2 b3 plus'
             'b0 dot equals equals';
-    padding: 100px;
+    padding: 60px;
     align: center;
     max-width: fit-content;
-    height: 60%;
-    background-color: gray;
+    height: 45%;
+    background-color: #282828;
+    border: 40px solid #ebdbb2;
+    box-shadow: 10px 10px 20px #282828;
 }
 
 #display {
     grid-area: header;
-    background-color: darkgreen;
-    color: lightgreen;
-    height: 50px;
+    display: flex;
+    padding: 0px 20px;
+    align-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: #9d0006;
+    height: 100px;
+    width: 360px;
+    overflow: hidden;
     font-size: 26px;
+    font-family: monospace;
 }
 .button {
     background-color: lightgray;
     color: black;
     text-align: center;
-    min-width: 80px;
-    min-height: 80px;
-    font-size: 18;
+    min-width: 70px;
+    min-height: 70px;
+    font-size: 25px;
     font-weight: bold;
     font-family: monospace;
+    box-shadow: 5px 5px 3px;
 }
 
-#clear{ grid-area: clear;}
-#backspace{ grid-area: backspace;}
-#blank{ grid-area: blank;}
-#div{ grid-area: div;}
+#clear{ 
+    grid-area: clear;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#backspace{ 
+    grid-area: backspace;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#blank{ 
+    grid-area: blank;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#div{ 
+    grid-area: div;
+    background-color: #ebdbb2;
+    color: #282828;
+}
 #b0{ grid-area: b0;}
 #b1{ grid-area: b1;}
 #b2{ grid-area: b2;}
@@ -54,9 +86,30 @@
 #b7{ grid-area: b7;}
 #b8{ grid-area: b8;}
 #b9{ grid-area: b9;}
-#mul{ grid-area: mul;}
-#sub{ grid-area: sub;}
-#plus{ grid-area: plus;}
-#dot{ grid-area: dot;}
-#equals{ grid-area: equals; grid-column: 3/5}
+#mul{ 
+    grid-area: mul;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#sub{ 
+    grid-area: sub;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#plus{ 
+    grid-area: plus;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#dot{ 
+    grid-area: dot;
+    background-color: #ebdbb2;
+    color: #282828;
+}
+#equals{ 
+    grid-area: equals; 
+    grid-column: 3/5;
+    background-color: #af3a03;
+    color: #282828;
+}
 
