@@ -1,0 +1,62 @@
+#container {
+    font-family: monospace;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#calculator {
+    display: grid;
+    gap: 20px;
+    grid-template: 
+            'header header header header'
+            'clear backspace blank div'
+            'b7 b8 b9 mul'
+            'b4 b5 b6 sub'
+            'b1 b2 b3 plus'
+            'b0 dot equals equals';
+    padding: 100px;
+    align: center;
+    max-width: fit-content;
+    height: 60%;
+    background-color: gray;
+}
+
+#display {
+    grid-area: header;
+    background-color: darkgreen;
+    color: lightgreen;
+    height: 50px;
+    font-size: 26px;
+}
+.button {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 18;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#clear{ grid-area: clear;}
+#backspace{ grid-area: backspace;}
+#blank{ grid-area: blank;}
+#div{ grid-area: div;}
+#b0{ grid-area: b0;}
+#b1{ grid-area: b1;}
+#b2{ grid-area: b2;}
+#b3{ grid-area: b3;}
+#b4{ grid-area: b4;}
+#b5{ grid-area: b5;}
+#b6{ grid-area: b6;}
+#b7{ grid-area: b7;}
+#b8{ grid-area: b8;}
+#b9{ grid-area: b9;}
+#mul{ grid-area: mul;}
+#sub{ grid-area: sub;}
+#plus{ grid-area: plus;}
+#dot{ grid-area: dot;}
+#equals{ grid-area: equals; grid-column: 3/5}
+

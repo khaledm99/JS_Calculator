@@ -3,7 +3,8 @@ function Token(type, value=null) {
 }
 
 
-const input = "4+1-2";
+
+
 
 function tokenize(input) {
     const digits = ['.','0','1','2','3','4','5','6','7','8','9'];
@@ -138,11 +139,36 @@ function parse(tokens) {
     return result;
 }
 
+let input = "";
+let display = document.getElementById("display");
+display.innerHTML = input;
+document.getElementById("b0").addEventListener("click", () => {input=input.concat('0');display.innerHTML = input; });
+document.getElementById("b1").addEventListener("click", () => {input=input.concat('1');display.innerHTML = input; });
+document.getElementById("b2").addEventListener("click", () => {input=input.concat('2');display.innerHTML = input; });
+document.getElementById("b3").addEventListener("click", () => {input=input.concat('3');display.innerHTML = input; });
+document.getElementById("b4").addEventListener("click", () => {input=input.concat('4');display.innerHTML = input; });
+document.getElementById("b5").addEventListener("click", () => {input=input.concat('5');display.innerHTML = input; });
+document.getElementById("b6").addEventListener("click", () => {input=input.concat('6');display.innerHTML = input; });
+document.getElementById("b7").addEventListener("click", () => {input=input.concat('7');display.innerHTML = input; });
+document.getElementById("b8").addEventListener("click", () => {input=input.concat('8');display.innerHTML = input; });
+document.getElementById("b9").addEventListener("click", () => {input=input.concat('9');display.innerHTML = input; });
+document.getElementById("plus").addEventListener("click", () => {input=input.concat('+');display.innerHTML = input; });
+document.getElementById("clear").addEventListener("click", () => {input="";display.innerHTML = input; });
+document.getElementById("backspace").addEventListener("click", () => {input=input.slice(0,-1);display.innerHTML = input; });
+document.getElementById("div").addEventListener("click", () => {input=input.concat('/');display.innerHTML = input; });
 
-try{ 
-    tokens = tokenize(input);
-    console.log(parse(tokens));
-}
-catch(e) {
-    console.log(e);
-}
+document.getElementById("mul").addEventListener("click", () => {input=input.concat('*');display.innerHTML = input; });
+document.getElementById("sub").addEventListener("click", () => {input=input.concat('-');display.innerHTML = input; });
+document.getElementById("dot").addEventListener("click", () => {input=input.concat('.');display.innerHTML = input; });
+document.getElementById("equals").addEventListener("click",
+    () => {
+        try{ 
+            tokens = tokenize(input);
+            input = parse(tokens).toString();
+            display.innerHTML = input;
+        }
+        catch(e) {
+            console.log(e);
+        }});
+
+
